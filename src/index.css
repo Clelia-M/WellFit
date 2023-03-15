@@ -1,4 +1,5 @@
-body {
+/* Standard cde to remove as soon as we have ours in place */
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,114 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+/* variables */
+:root {
+  --primaryclr: #054e37;
+  --primarylightclr: #12a537;
+  --secondaryclr: #FCBC01;
+  --secondarylightclr: #F5CE64;
+  --accentclr: #5F1646;
+  --textlightclr: #fff;
+  --textcolor: black;
+  --sans-serif: Jost, sans-serif;
+}
+
+
+/* Main style */
+body {
+  font-family: var(--sans-serif);
+}
+
+/* Navigation bar */
+.navbar {
+  background-color: var(--primaryclr);
+}
+
+.nav-link,
+.navbar-brand {
+  color: var(--textlightclr);
+  font-weight: 700;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: var(--secondarylightclr);
+
+}
+
+.navbar-item {
+  font-size: 20px;
+}
+
+/* Header */
+header {
+  background-color: var(--primaryclr);
+}
+
+/* Jumbotron */
+#mission {
+  color: var(--primaryclr);
+  padding-bottom: 20px;
+}
+
+#about {
+  margin-bottom: 100px;
+}
+
+/* FAQ section */
+#questions,
+.accordion-item,
+.accordion-header,
+.accordion-button {
+  background-color: var(--accentclr);
+  color: var(--textlightclr);
+}
+
+/* Newsletter sign-up */
+.news-cust {
+  color: var(--primaryclr);
+}
+
+.btn-news {
+  background-color: var(--secondarylightclr);
+  color: var(--primaryclr);
+}
+
+.btn-news:hover {
+  background-color: var(--accentclr);
+  color: var(--textlightclr);
+}
+
+/* Footer section */
+.bi-arrow-up-circle {
+  color: var(--textlightclr);
+}
+
+.card-bg-primary {
+  background-color: var(--primaryclr);
+  border: 1px solid var(--primaryclr);
+}
+
+.btn-acc-round {
+  background-color: var(--secondarylightclr);
+  border: 5px solid var(--secondarylightclr);
+  border-radius: 50%;
+  color: var(--textlightclr);
+  font-weight: 700;
+  margin: 15px;
+}
+
+.btn-acc-round:hover {
+  background-color: var(--accentclr);
+  border: 5px solid var(--accentclr);
+  color: var(--textlightclr);
+  box-shadow: 0 0 11px rgba(33, 33, 33, .5);
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: var(--primaryclr);
 }
