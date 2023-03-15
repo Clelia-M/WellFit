@@ -11,10 +11,13 @@ function Navbar() {
           <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
               <li class="navbar-item">
-                <a href="#order" class="nav-link">Placeholder</a>
+                <a href="#cards" class="nav-link">What is WellFit?</a>
               </li>
               <li class="navbar-item">
-                <a href="#youtube" class="nav-link">Placeholder</a>
+                <a href="#nutritions" class="nav-link">Your Meals</a>
+              </li>
+              <li class="navbar-item">
+                <a href="#workout" class="nav-link">Your Workout</a>
               </li>
               <li class="navbar-item">
                 <a href="#questions" class="nav-link">FAQ</a>

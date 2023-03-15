@@ -15,11 +15,11 @@ code {
 
 /* variables */
 :root {
-  --primaryclr: #054e37;
+  --primaryclr: #5F1646; 
   --primarylightclr: #12a537;
   --secondaryclr: #FCBC01;
   --secondarylightclr: #F5CE64;
-  --accentclr: #5F1646;
+  --accentclr: #054e37;
   --textlightclr: #fff;
   --textcolor: black;
   --sans-serif: Jost, sans-serif;
