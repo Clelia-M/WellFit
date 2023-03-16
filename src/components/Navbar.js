@@ -11,7 +11,7 @@ function Navbar() {
           <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
               <li class="navbar-item">
-                <a href="#cards" class="nav-link">What is WellFit?</a>
+                <a href="#cards-container" class="nav-link">What is WellFit?</a>
               </li>
               <li class="navbar-item">
                 <a href="#nutritions" class="nav-link">Your Meals</a>
