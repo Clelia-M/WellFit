@@ -8,12 +8,14 @@ import Charts from './components/Charts';
 import FAQ from './components/FAQ';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 
 function App() {
   return (
     <div>
       <Navbar />
+      <Header />
       <Jumbotron />
       <Cards />
       <Nutritions />

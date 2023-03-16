@@ -51,15 +51,11 @@ body {
 }
 
 /* Header */
-header {
+#logo {
   background-color: var(--primaryclr);
 }
 
 /* Jumbotron */
-header {
-  color: var(--primarylightclr);
-}
-
 .type-super {
   color: var(--secondarylightclr);
 }
@@ -89,7 +85,7 @@ header {
 .accordion-item,
 .accordion-header,
 .accordion-button {
-  background-color: var(--accentclr);
+  background-color: var(--primaryclr);
   color: var(--textlightclr);
 }
 
