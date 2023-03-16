@@ -1,18 +1,3 @@
-/* Standard cde to remove as soon as we have ours in place */
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 /* variables */
 :root {
   --primaryclr: #5F1646; 
@@ -94,6 +79,10 @@ header {
 /* Footer section */
 .bi-arrow-up-circle {
   color: var(--textlightclr);
+}
+
+.bi-arrow-up-circle:hover {
+  color: var(--secondarylightclr);
 }
 
 .card-bg-primary {
