@@ -19,8 +19,10 @@ function Footer() {
         </button>
       </div>
       <div className="copyright">
-        <p>Copyright &copy; 2023 Bex Ford - Clelia Mangione</p>
-        <a href="www.google.com" className="position-absolute bottom-0 end-0 p-5"><i className="bi bi-arrow-up-circle h1"></i></a>
+        <p>Copyright &copy; 2023 Bex Ford - Clelia Mangione - Jingyue Zhao</p>
+        <a href="#" className="position-absolute bottom-0 end-0 p-5">
+            <i className="bi bi-arrow-up-circle h1"></i>
+          </a>
       </div>
     </div>
   </footer>

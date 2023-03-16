@@ -102,8 +102,8 @@ header {
 }
 
 .btn-acc-round {
-  background-color: var(--secondarylightclr);
-  border: 5px solid var(--secondarylightclr);
+  background-color: var(--textlightclr);
+  border: 5px solid var(--textlightclr);
   border-radius: 50%;
   color: var(--textlightclr);
   font-weight: 700;
@@ -111,8 +111,8 @@ header {
 }
 
 .btn-acc-round:hover {
-  background-color: var(--accentclr);
-  border: 5px solid var(--accentclr);
+  background-color: var(--secondarylightclr);
+  border: 5px solid var(--secondarylightclr);
   color: var(--textlightclr);
   box-shadow: 0 0 11px rgba(33, 33, 33, .5);
 }
