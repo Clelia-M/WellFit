@@ -56,13 +56,12 @@ header {
 }
 
 /* Jumbotron */
-#mission {
-  color: var(--primaryclr);
-  padding-bottom: 20px;
+header {
+  color: var(--primarylightclr);
 }
 
-#about {
-  margin-bottom: 100px;
+.type-super {
+  color: var(--secondarylightclr);
 }
 
 /* Cards section */

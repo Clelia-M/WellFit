@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      {/* <Jumbotron /> */}
+      <Jumbotron />
       <Cards />
       <Nutritions />
       <Workout />
