@@ -1,12 +1,13 @@
 /* variables */
 :root {
   --primaryclr: #5F1646; 
-  --primarylightclr: #12a537;
+  --primarylightclr:#FAFAF5;
   --secondaryclr: #FCBC01;
   --secondarylightclr: #F5CE64;
   --accentclr: #054e37;
+  --accentlightclr: #12a537;
   --textlightclr: #fff;
-  --textcolor: black;
+  --textcolor: #333333;
   --sans-serif: Jost, sans-serif;
 }
 
@@ -45,7 +46,6 @@ body {
 
 }
 
-
 .navbar-item {
   font-size: 20px;
 }
@@ -63,6 +63,26 @@ header {
 
 #about {
   margin-bottom: 100px;
+}
+
+/* Cards section */
+.card-img-top {
+  height: 200px;
+  object-fit: contain;
+}
+
+.type-large-fat {
+  font-size: 45px;
+  color: var(--textcolor);
+}
+
+#cards-container {
+  margin: 50px 0;
+  padding: 50px 0;
+}
+
+.card-text {
+  line-height: 2;
 }
 
 /* FAQ section */
