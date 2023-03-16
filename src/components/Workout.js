@@ -5,7 +5,9 @@ function Workout() {
     <div className="card">
       <h2>Weight and Reps Calculator</h2>
       <p>
-        Enter the weight and reps to get the estimate of your 1RM (one rep max)
+        Enter the weight and reps to get the estimate of your 1RM (one-rep max).
+        Your one-rep max is the max weight you can lift for a single repitition
+        for a given exercise.
       </p>
       <form>
         <label>
@@ -14,7 +16,7 @@ function Workout() {
           <select name="liftmassunit" id="liftmassunit">
             <option value="kg"> kg </option>
             <option value="lb"> lb </option>
-            </select>
+          </select>
         </label>
         <br></br>
         <label>
@@ -24,18 +26,18 @@ function Workout() {
         <br></br>
         <label>
           Exercise
-          <select> 
+          <select>
             <option value="bench">Bench Press</option>
             <option value="deadlift">Deadlift</option>
             <option value="squat">Squat</option>
           </select>
         </label>
         <br></br>
-        <input type="submit" value="Show Graph" />
+        <input type="submit" value="Calculate 1RM" />
       </form>
       <br></br>
       <h5>What is 1RM?</h5>
-      <p>One repo max ................</p>
+      <p>One rep max ................</p>
     </div>
   );
 }
