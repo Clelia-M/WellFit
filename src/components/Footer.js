@@ -6,15 +6,15 @@ function Footer() {
     <div className="container">
       <div className="social">
         <button type="button" className="btn btn-acc-round">
-          <a href="https://www.youtube.com/"><span className="fa-brands fa-youtube"
+          <a target="_blank" href="https://www.youtube.com/"><span className="fa-brands fa-youtube"
               aria-hidden="true"></span><span className="sr-only">Youtube</span></a>
         </button>
         <button type="button" className="btn btn-acc-round">
-          <a href="https://twitter.com"><span className="fa-brands fa-twitter"
+          <a target="_blank" href="https://twitter.com"><span className="fa-brands fa-twitter"
               aria-hidden="true"></span><span className="sr-only">Twitter</span></a>
         </button>
         <button type="button" className="btn btn-acc-round">
-          <a href="https://www.instagram.com/"><span className="fa-brands fa-instagram"
+          <a target="_blank" href="https://www.instagram.com/"><span className="fa-brands fa-instagram"
               aria-hidden="true"></span><span className="sr-only">Instagram</span></a>
         </button>
       </div>
