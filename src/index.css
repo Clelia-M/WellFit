@@ -33,6 +33,19 @@ body {
 
 }
 
+.nav-link:active,
+.navbar-brand:active {
+  color: var(--secondarylightclr);
+
+}
+
+.nav-link:focus,
+.navbar-brand:focus {
+  color: var(--secondarylightclr);
+
+}
+
+
 .navbar-item {
   font-size: 20px;
 }
