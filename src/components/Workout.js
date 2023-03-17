@@ -8,16 +8,17 @@ function Workout() {
   const [weight, setWeight] = useState(0);
   const [reps, setReps] = useState(0);
   const [exercise, setExercise] = useState(0);
+  const [oneRepMax, setOneRepMax] = useState(0);
 
   let calcOneRepMax = (event) => {
     // prevent submitting 
     event.preventDefault()
 
-    if (weight === 0 || reps === 0) {
-      alert('Please enter a valid weight and reps')
-    } else {
-      let      1RM = W*(1 + r/30)
-    }
+    // if (weight === 0 || reps === 0) {
+    //   alert('Please enter a valid weight and reps')
+    // } else {
+    //   let      1RM = W*(1 + r/30)
+    // }
 
   }
 
@@ -39,7 +40,7 @@ function Workout() {
         based on the maximum number of reps (r) of a lesser weight (w). This
         method is used in some competitions and in many gyms to avoid injuries
         and to provide a more consistent measure of endurance and strength. The
-        Epley Formula for one repetition max is as follows: 1RM = W•(1 + r/30){" "}
+        Epley Formula for one repetition max is as follows: 1RM = W*(1 + r/30){" "}
       </p>
       <p>
         Enter the weight and reps to get the estimate of your 1RM (one-rep max).
@@ -49,12 +50,12 @@ function Workout() {
       <form>
         <label>
           Weight (kg)
-          <input type="text" value="weight" />
+          <input value={weight} />
         </label>
         <br></br>
         <label>
           Reps
-          <input type="text" value="reps" />
+          <input value={reps} />
         </label>
         <br></br>
         <label>
@@ -66,8 +67,11 @@ function Workout() {
           </select>
         </label>
         <br></br>
-        <input type="submit" value="Calculate 1RM" />
+        <button className='btn' type='submit'>Calculate 1RM</button>
       </form>
+      <div className="center">
+        <h5>Your 1RM is: {oneRepMax}</h5>
+      </div>
       <br></br>
     </div>
   );
