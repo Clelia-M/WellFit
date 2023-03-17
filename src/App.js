@@ -9,6 +9,7 @@ import FAQ from './components/FAQ';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Youtube from './components/Youtube';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Charts />
       <FAQ />
       <Newsletter />
+      <Youtube />
       <Footer />
     </div>
   );
