@@ -96,12 +96,17 @@ body {
 
 .btn-news {
   background-color: var(--secondarylightclr);
-  color: var(--primaryclr);
+  color: var(--textlightclr);
 }
 
 .btn-news:hover {
-  background-color: var(--accentclr);
+  background-color: var(--primaryclr);
   color: var(--textlightclr);
+}
+
+#newsletter {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /*  Youtube style */
