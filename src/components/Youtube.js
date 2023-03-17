@@ -6,7 +6,7 @@ function Youtube() {
   useEffect(() => {
     // GET request to the Youtube API to search for videos with "gluten free vegetarian receipes" keyword (max 6)
     fetch(
-      "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=women%20workout&key=AIzaSyBUcjel4V2-SSp_x3DEBHVUNdVcMRCMqgc"
+      "https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCpis3RcTw6t47XO0R_KY4WQ&maxResults=3&q=women%20workout&key=AIzaSyBUcjel4V2-SSp_x3DEBHVUNdVcMRCMqgc"
     )
       // Take the response from the API and converts it to JSON format
       .then((result) => {
@@ -21,6 +21,8 @@ function Youtube() {
   }, []);
 
   return (
+    <div>
+    <h2 id="yt-title"> Workout Inspiration</h2>
     <div id="youtube">
       {/* Loops over the "videos" array and creates HTML content for each video */}
       {videos.map((video) => (
@@ -36,10 +38,11 @@ function Youtube() {
             href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
             className="video-link"
           >
-            <button className="btn video-btn">Watch on YouTube</button>
+            <button target="_blank" className="btn video-btn">Watch on YouTube</button>
           </a>
         </div>
       ))}
+    </div>
     </div>
   );
 }
