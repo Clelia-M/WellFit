@@ -67,6 +67,26 @@ header {
   margin-bottom: 100px;
 }
 
+.card-deck {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card-deck button {
+  background-color: #5F1646;
+  color:#fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+
+}
+
+.card-deck label {
+  padding: 5px;
+}
+
 /* FAQ section */
 #questions,
 .accordion-item,
