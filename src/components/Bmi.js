@@ -2,7 +2,7 @@ import React from "react";
 import "fitness-calc";
 
 // HTML structure
-function Bmr() {
+function Bmi() {
   return (
     <div className="card">
       <h2>BMR Calculator</h2>
@@ -29,4 +29,4 @@ function Bmr() {
   );
 }
 
-export default Bmr;
+export default Bmi;

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "fitness-calc";
 
 function Workout() {
+  const fitness = require('fitness-calc');
   // state
   const [weight, setWeight] = useState(0);
   const [reps, setReps] = useState(0);
@@ -20,14 +21,14 @@ function Workout() {
       setOneRepMax(oneRepMax.toFixed(1))
     }
   };
-
+ // allows user to reload 
   let reload = () => {
     window.location.reload()
   }
 
   // HTML structure 
   return (
-    <div className="card">
+    <div className="d-flex flex-column p-10 col-lg-6 col-sm-12">
       <h2>One Rep Max Calculator</h2>
       <h5>What is 1RM?</h5>
       <p>
