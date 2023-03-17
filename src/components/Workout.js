@@ -28,7 +28,7 @@ function Workout() {
 
   // HTML structure 
   return (
-    <div className="d-flex flex-column p-10 col-lg-6 col-sm-12">
+    <div className="card">
       <h2>One Rep Max Calculator</h2>
       <h5>What is 1RM?</h5>
       <p>
