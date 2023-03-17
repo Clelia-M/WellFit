@@ -47,15 +47,12 @@ function Workout() {
   );
 }
 
-// fitness calc function
-function FitnessCalc() {
-  const fitness = require("fitness-calc");
+const fitnessCalc = require("fitness-calc");
 
-  const weight = 100;
-  const reps = 5;
+const weight = 100;
+const reps = 5;
 
-  const oneRepMax = fitness.oneRepMaxEpley(weight, reps);
-  console.log(oneRepMax);
-}
+const oneRepMax = fitnessCalc.oneRepMaxEpley(weight, reps);
+console.log(oneRepMax);
 
 export default Workout;
