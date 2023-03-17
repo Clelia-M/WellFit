@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "fitness-calc";
 
 // HTML structure
 function Workout() {
+
+  // state
+  const [weight, setWeight] = useState(0);
+  const [reps, setReps] = useState(0);
+  const [exercise, setExercise] = useState(0);
+
+  let calcOneRepMax = (event) => {
+    // prevent submitting 
+    event.preventDefault()
+
+    if (weight === 0 || reps === 0) {
+      alert('Please enter a valid weight and reps')
+    } else {
+      let      1RM = W*(1 + r/30)
+    }
+
+  }
+
+  // const fitness = require("fitness-calc");
+
+  // const weight = 100;
+  // const reps = 5;
+
+  // const oneRepMax = fitness.oneRepMaxEpley(weight, reps);
+  // console.log(oneRepMax);
+
   return (
     <div className="card">
       <h2>One Rep Max Calculator</h2>
@@ -23,12 +49,12 @@ function Workout() {
       <form>
         <label>
           Weight (kg)
-          <input type="text" weight="weight" />
+          <input type="text" value="weight" />
         </label>
         <br></br>
         <label>
           Reps
-          <input type="text" reps="reps" />
+          <input type="text" value="reps" />
         </label>
         <br></br>
         <label>
@@ -46,13 +72,5 @@ function Workout() {
     </div>
   );
 }
-
-const fitnessCalc = require("fitness-calc");
-
-const weight = 100;
-const reps = 5;
-
-const oneRepMax = fitnessCalc.oneRepMaxEpley(weight, reps);
-console.log(oneRepMax);
 
 export default Workout;
