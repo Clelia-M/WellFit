@@ -1,9 +1,10 @@
 import React from "react";
 
+// HTML structure 
 function Workout() {
   return (
     <div className="card">
-      <h2>Weight and Reps Calculator</h2>
+      <h2>One Rep Max Calculator</h2>
       <p>
         Enter the weight and reps to get the estimate of your 1RM (one-rep max).
         Your one-rep max is the max weight you can lift for a single repitition
@@ -11,12 +12,8 @@ function Workout() {
       </p>
       <form>
         <label>
-          Weight
+          Weight (kg)
           <input type="text" weight="weight" />
-          <select name="liftmassunit" id="liftmassunit">
-            <option value="kg"> kg </option>
-            <option value="lb"> lb </option>
-          </select>
         </label>
         <br></br>
         <label>
@@ -41,5 +38,16 @@ function Workout() {
     </div>
   );
 }
+
+// one rep max function 
+function OneRepMax() {
+  const fitness = require('fitness-calc');
+
+  const weight = 100;
+  const reps = 5;
+  
+  const oneRepMax = fitness.oneRepMaxEpley(weight, reps);
+  console.log(oneRepMax);
+} 
 
 export default Workout;
