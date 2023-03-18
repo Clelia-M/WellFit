@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# WellFit Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application that provides recipe ideas for vegetarian and gluten-free options, quick and easy to find options related to the user's dietary requirements. The user can include or exclude ingredients and select a cuisine of their choice. 
 
-## Available Scripts
+The Javascript code uses functions and event listeners to handle user interactions and update the content on the screen. Two APIs are used to retrieve the recipes and videos ideas. 
 
-In the project directory, you can run:
+The two APIs used in this website are: Spoonacular and Youtube. 
 
-### `npm start`
+This app has been created as a group project by Bex Ford and Clelia Mangione for the edEX Front-End Development Bootcamp. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Key Features](#key-features)
+- [Workflow](#workflow)
+- [Link to the Application](#link-to-deployed-application)
+- [Final result](#final-results)
 
-### `npm test`
+# Key Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Find recipe ideas for vegetarian and gluten free options.
+- Search for recipes by including or excluding ingredients.
+- Select a cuisine of your choice.
+- Watch extra recipe videos from Youtube.
 
-### `npm run build`
+# Workflow
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. The user types the name of a dish, including or excluding ingredients and they choose a specific cuisine. 
+2. This triggers the Spoonacular API to show 6 recipes ideas. 
+3. In the Videos Ideas section, the YouTube API is triggered to show other 6 video recips ideas for general vegetarian gluten free dishes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Link to deployed Application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Just Veggie](https://bex-ford.github.io/project-1/)
 
-### `npm run eject`
+## GitHub 
+[GitHub](https://github.com/bex-ford/project-1)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Final Results
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+When the user visits the page it is displayed with a navigation bar at the top and the logo as you can see in the image below:
+![Website](assets/Website.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Spoonacular API 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The first API we created was from Spoonacular. Our website was created for users that are vegetarian with a gluten intolerance. Therefore the API request we created only displays food that are vegetarian and gluten free. With this API we also wanted the user to have the choice to include or exclude ingredients therefore we built it into the API request. We felt that this give the user more options to narrow down the recipe that they want to find, creating an overall better user experience. As you can see in the image below the options for the user: 
 
-## Learn More
+![Spoonacular API](assets/spoonacularAPI.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Youtube API 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The second API we created was Youtube. This enabled users to have a video link of vegeterian and gluten-free recipes. We felt this made the overall user experience great as all of the information was given without the user having to do a second search. As you can see in the image below the user has the option to click on **Watch on Youtube** button if they choose to do so. 
 
-### Code Splitting
+![Youtube API](assets/youtubeAPI.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Brand theme
+Below is an image of the colour palette in which we used throughout designing the web application. 
 
-### Analyzing the Bundle Size
+![colour theme](assets/JVcolour.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The font style we used for this project was called **Jost** from google fonts.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Credits 
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Ryan Ford (Graphic Designer). Ryan designed the JustVeggie logo for this project which is displayed below. 
+![JustVeggie Logo](assets/justveggie.png)

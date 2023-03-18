@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "fitness-calc";
 
 function Bmr() {
@@ -9,36 +9,20 @@ function Bmr() {
   const [burned, setBurned] = useState(0);
   const [calories, setCalories] = useState("");
 
-  // functions for weight, height, age, gender and calories
-  function setWeightBmr(e) {
-    setWeight(e.target.value);
-  }
-  function setHeightBmr(e) {
-    setHeight(e.target.value);
-  }
-  function setAgeBmr(e) {
-    setAge(e.target.value);
-  }
-  function setFemaleBmr(e) {
-    setFemale(e.target.value);
-  }
-  function setBurnedBmr(e) { 
-    setBurned(e.target.value)
-  }
-  function setCaloriesBmr(e) {
-    setCalories(e.target.value);
-  }
+  let calculateBmr = (e) => {
+    // prevent submitting
+    e.preventDefault();
 
-  useEffect(() => {
-    if (height !== 0) {
-      if (female) {
-        // womens BMR
-        setCalories((50 + 2.3 * ((height - 60) / 2.54)).toFixed(2));
-      }
+    if (weight === 0 || height === 0 || age === 0) {
+      alert("Please enter valid weight, height and age");
+    } else {
+      // BMR formula
+      let calories = 50 + 2.3 * ((height - 60) / 2.54);
+      setCalories(calories.toFixed(2));
     }
-  });
+  };
 
- // allows user to reload
+  // allows user to reload
   let reload = () => {
     window.location.reload();
   };
@@ -56,7 +40,7 @@ function Bmr() {
               Basal metabolic rate is the number of calories your body needs to
               accomplish its most basic (basal) life-sustaining functions.
             </h5>
-            <form>
+            <form onSubmit={calculateBmr}>
               <label>
                 Weight (kg)
                 <input
