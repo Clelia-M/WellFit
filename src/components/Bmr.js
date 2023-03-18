@@ -5,7 +5,6 @@ function Bmr() {
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
   const [age, setAge] = useState(0);
-  const [female, setFemale] = useState(0);
   const [burned, setBurned] = useState(0);
   const [calories, setCalories] = useState("");
   const [activity, setActivity] = useState(0);
@@ -63,6 +62,20 @@ function Bmr() {
                 <input value={age} onChange={(e) => setAge(e.target.value)} />
               </label>
               <br></br>
+              <label className="label">Workout in a week</label>
+              <select className="activity" value={activity}>
+                <option value="">Select your Activity</option>
+                <option value="">Very little or no exercise</option>
+                <option value="">Exercise 1-3 times/week</option>
+                <option value="">Exercise 4-5 times/week</option>
+                <option value="">
+                  Daily exercise or intense exercise 3-4 times/week
+                </option>
+                <option value="">Intense exercise 6-7 times/week</option>
+                <option value="">
+                  Very intense exercise daily, or physical{" "}
+                </option>
+              </select>
               <button
                 className="btn btn-secondary btn-lg btn-block"
                 type="submit"
@@ -83,24 +96,10 @@ function Bmr() {
               <h5>Your BMR is: {calories} </h5>
             </div>
             <br></br>
-            <div className="input-wrap">
-              <label className="label">Workout in a week</label>
-              <select className="activity" value={activity}>
-              <option value="">Select your Activity</option>
-              <option value="">Very little or no exercise</option>
-              <option value="">Exercise 1-3 times/week</option>
-              <option value="">Exercise 4-5 times/week</option>
-              <option value="">Daily exercise or intense exercise 3-4 times/week</option>
-              <option value="">Intense exercise 6-7 times/week</option>
-              <option value="">Very intense exercise daily, or physical </option>
-              </select>
-              <br></br>
-              <br></br>
             <div className="center">
               <h5>Calories/day: {burned} </h5>
             </div>
             <br></br>
-            </div>
           </div>
         </div>
       </div>
