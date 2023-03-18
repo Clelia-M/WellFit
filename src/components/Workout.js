@@ -89,10 +89,12 @@ function Workout() {
               <h5>Your 1RM is: {oneRepMax}</h5>
             </div>
             <br></br>
+            
           </div>
         </div>
       </div>
     </div>
+    
   );
 }
 

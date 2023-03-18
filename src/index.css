@@ -87,6 +87,10 @@ header {
   padding: 5px;
 }
 
+.card-deck input {
+  margin-left: 10px;
+}
+
 /* FAQ section */
 #questions,
 .accordion-item,
