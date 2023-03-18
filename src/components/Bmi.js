@@ -14,7 +14,7 @@ function Bmi() {
       alert("Please enter valid weight and height");
     } else {
       // BMI formula
-      let bmi = (weight / (height * height)) * 703;
+      let bmi = (weight / (height * height) * 703)
       setBmi(bmi.toFixed(1));
     }
   };
@@ -39,7 +39,7 @@ function Bmi() {
             </p>
             <form onSubmit={calculateBmi}>
               <label>
-                Weight (kg)
+                Weight (lbs)
                 <input
                   type="text"
                   value={weight}

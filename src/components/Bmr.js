@@ -2,54 +2,53 @@ import React, { useEffect, useState } from "react";
 import "fitness-calc";
 
 function Bmr() {
+  const [weight, setWeight] = useState(0);
+  const [height, setHeight] = useState(0);
+  const [age, setAge] = useState(0);
+  const [female, setFemale] = useState(0);
+  const [burned, setBurned] = useState(0);
+  const [calories, setCalories] = useState("");
 
-  const [weight, setWeight] = useState (0);
-  const[height, setHeight] = useState(0);
-  const[age, setAge] = useState (0);
-  const [gender, setGender] = useState (0);
-  const [calories, setCalories] = useState (0);
-
-  function setWeightBmr(e){
+  // functions for weight, height, age, gender and calories
+  function setWeightBmr(e) {
     setWeight(e.target.value);
   }
-  function setHeightBmr(e){
+  function setHeightBmr(e) {
     setHeight(e.target.value);
   }
-  function setAgeBmr(e){
+  function setAgeBmr(e) {
     setAge(e.target.value);
   }
-  function setGenderBmr(e){
-    setGender(e.target.value);
+  function setFemaleBmr(e) {
+    setFemale(e.target.value);
   }
-  function setCaloriesBmr(e){
+  function setBurnedBmr(e) { 
+    setBurned(e.target.value)
+  }
+  function setCaloriesBmr(e) {
     setCalories(e.target.value);
   }
 
   useEffect(() => {
-    if (height!==0) {
-      if (gender) {
+    if (height !== 0) {
+      if (female) {
         // womens BMR
-        setCalories(10 * weight + 6.25 * height - 5 * age - 161)
+        setCalories((50 + 2.3 * ((height - 60) / 2.54)).toFixed(2));
       }
     }
-  }
-  )
+  });
 
-  // exports.BMR_men = BMR_men;
-  // function BMR_women(weight, height, age) {
-  //     return Number((10 * weight + 6.25 * height - 5 * age - 161).toFixed(2));
-  // }
-  // exports.BMR_women = BMR_women;
-  // function IBW_men(height, age) {
-  //     return Number((50 + 2.3 * ((height - 60) / 2.54)).toFixed(2));
-  // }
+ // allows user to reload
+  let reload = () => {
+    window.location.reload();
+  };
 
   return (
     <div class="card-deck">
       <div className="col-sm-6">
         <div className="row">
           <div className="card text-center">
-            <h2>BMR Calculator</h2>
+            <h2>Womens BMR Calculator</h2>
             <h5>
               Basal metabolic rate (BMR). Even when resting, your body burns
               calories by performing basic functions to sustain life such as:
@@ -59,26 +58,24 @@ function Bmr() {
             </h5>
             <form>
               <label>
-                Weight
-                <input value="" />
+                Weight (kg)
+                <input
+                  value={weight}
+                  onChange={(e) => setWeight(e.target.value)}
+                />
               </label>
               <br></br>
               <label>
-                Height
-                <input value="" />
+                Height (cm)
+                <input
+                  value={height}
+                  onChange={(e) => setHeight(e.target.value)}
+                />
               </label>
               <br></br>
               <label>
                 Age
-                <input value="" />
-              </label>
-              <br></br>
-              <label>
-                Gender
-                <select>
-                  <option value="female">Female</option>
-                  <option value="male">Male</option>
-                </select>
+                <input value={age} onChange={(e) => setAge(e.target.value)} />
               </label>
               <br></br>
               <button
@@ -90,13 +87,19 @@ function Bmr() {
               <br></br>
               <button
                 className="btn btn-secondary btn-lg btn-block"
+                onClick={reload}
                 type="submit"
               >
                 Reset
               </button>
             </form>
+            <br></br>
             <div className="center">
-              <h5>Your BMR is: </h5>
+              <h5>Calories burned today: {burned} </h5>
+            </div>
+            <br></br>
+            <div className="center">
+              <h5>Your BMR is: {calories} </h5>
             </div>
             <br></br>
           </div>
