@@ -22,11 +22,6 @@ function Bmr() {
     }
   };
 
-  // allows user to reload
-  let reload = () => {
-    window.location.reload();
-  };
-
   return (
     <div class="card-deck">
       <div className="col-sm-6">
@@ -62,6 +57,17 @@ function Bmr() {
                 <input value={age} onChange={(e) => setAge(e.target.value)} />
               </label>
               <br></br>
+              <button
+                className="btn btn-secondary btn-lg btn-block"
+                type="submit"
+              >
+                Calculate BMR
+              </button>
+            </form>
+            <div className="center">
+              <h5>Your BMR is: {calories} </h5>
+            </div>
+            <div className="input-wrap">
               <label className="label">Workout in a week</label>
               <select className="activity" value={activity}>
                 <option value="">Select your Activity</option>
@@ -76,30 +82,18 @@ function Bmr() {
                   Very intense exercise daily, or physical{" "}
                 </option>
               </select>
-              <button
-                className="btn btn-secondary btn-lg btn-block"
-                type="submit"
-              >
-                Submit
-              </button>
               <br></br>
               <button
                 className="btn btn-secondary btn-lg btn-block"
-                onClick={reload}
                 type="submit"
               >
-                Reset
+                Calculate Calories
               </button>
-            </form>
-            <br></br>
-            <div className="center">
-              <h5>Your BMR is: {calories} </h5>
+              <br></br>
+              <div className="center">
+                <h5>Calories burned: {burned} </h5>
+              </div>
             </div>
-            <br></br>
-            <div className="center">
-              <h5>Calories/day: {burned} </h5>
-            </div>
-            <br></br>
           </div>
         </div>
       </div>

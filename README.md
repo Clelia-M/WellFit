@@ -1,12 +1,24 @@
 # WellFit Application
 
-A web application that provides recipe ideas for vegetarian and gluten-free options, quick and easy to find options related to the user's dietary requirements. The user can include or exclude ingredients and select a cuisine of their choice. 
+A web application that provides information for women on diet, fitness workouts. The user can calculate how many calories are in the food they are consuming, workout there BMI, BMR and also calculate there 1RM. Along with all of this information the user is provided with links to Youtube videos for workout ideas.
 
-The Javascript code uses functions and event listeners to handle user interactions and update the content on the screen. Two APIs are used to retrieve dietry to work out calories per serving and video workout ideas. 
+The React.js code uses functions to handle user interactions and update the content on the screen. Two APIs are used to retrieve dietry to work out calories per serving and video workout ideas. 
 
-The two APIs used in this website: Caclories Burned by API-Ninjas and Youtube. 
+## APIs 
+The two APIs used in this website: 
+- *Calories Burned by API-Ninjas*
+- *Youtube*
 
-This app has been created as a group project by Bex Ford, Clelia Mangione and Jingyue Zhao for the edEX Front-End Development Bootcamp. 
+## NPM packages
+The NPM packages used in this wesbite:
+- *Fitness-Calc*
+- *Bootstrap* 
+- *Font Awesome*
+
+## Working Tree
+![Working tree]()
+
+This app has been created as a group project by **Bex Ford, Clelia Mangione and Jingyue Zhao** for the edEX Front-End Development Bootcamp. 
 
 ## Table of Contents
 
@@ -17,16 +29,17 @@ This app has been created as a group project by Bex Ford, Clelia Mangione and Ji
 
 # Key Features
 
-- Find recipe ideas for vegetarian and gluten free options.
-- Search for recipes by including or excluding ingredients.
-- Select a cuisine of your choice.
-- Watch extra recipe videos from Youtube.
+- Calculate how many calories are in the food you have consumed.
+- Work out your 1RM (one rep max).
+- Work out your BMI (Body mass index).
+- Work out your BRM (Basal metabolic rate).
+- Watch workout videos from Youtube.
 
 # Workflow
 
-1. The user types the name of a dish, including or excluding ingredients and they choose a specific cuisine. 
-2. This triggers the Spoonacular API to show 6 recipes ideas. 
-3. In the Videos Ideas section, the YouTube API is triggered to show other 6 video recips ideas for general vegetarian gluten free dishes.
+1. The user types the name of the food they have consumed. 
+2. This triggers the Calories Burned API. 
+3. In the Videos Ideas section, the YouTube API is triggered to show 3 video ideas for general workouts.
 
 ## Link to deployed Application
 
@@ -40,15 +53,15 @@ This app has been created as a group project by Bex Ford, Clelia Mangione and Ji
 When the user visits the page it is displayed with a navigation bar at the top and the logo as you can see in the image below:
 ![Website](assets/Website.png)
 
-## Caclories Burned by API-Ninjas (API)
+## Caclories Burned API
 
-The first API we created was from Spoonacular. Our website was created for users that are vegetarian with a gluten intolerance. Therefore the API request we created only displays food that are vegetarian and gluten free. With this API we also wanted the user to have the choice to include or exclude ingredients therefore we built it into the API request. We felt that this give the user more options to narrow down the recipe that they want to find, creating an overall better user experience. As you can see in the image below the options for the user: 
+The first API we created was from **Calories Burned by API-Ninjas**. This API allows users to input there food and the API will calculate how many calories is in the specific food they have entered. 
 
-![]()
+![Calories API]()
 
 ## Youtube API 
 
-The second API we created was Youtube. This enabled users to have a video link of vegeterian and gluten-free recipes. We felt this made the overall user experience great as all of the information was given without the user having to do a second search. As you can see in the image below the user has the option to click on **Watch on Youtube** button if they choose to do so. 
+The second API we created was **Youtube**. This enabled users to have a video link of workout ideas. We felt this made the overall user experience great as all of the information was given without the user having to do a second search. As you can see in the image below the user has the option to click on **Watch on Youtube** button if they choose to do so. 
 
 ![Youtube API]()
 
@@ -62,5 +75,5 @@ The font style we used for this project was called **Jost** from google fonts.
 
 ## Credits 
 
-- Ryan Ford (Graphic Designer). Ryan designed the JustVeggie logo for this project which is displayed below. 
+- Ryan Ford (Graphic Designer). Ryan designed the WellFit logo for this project which is displayed below. 
 ![WellFit Logo]()

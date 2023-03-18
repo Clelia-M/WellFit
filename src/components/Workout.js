@@ -20,10 +20,6 @@ function Workout() {
       setOneRepMax(oneRepMax.toFixed(1));
     }
   };
-  // allows user to reload
-  let reload = () => {
-    window.location.reload();
-  };
 
   // HTML structure
   return (
@@ -74,27 +70,18 @@ function Workout() {
                 className="btn btn-secondary btn-lg btn-block"
                 type="submit"
               >
-                Submit
+                Calculate 1RM
               </button>
               <br></br>
-              <button
-                className="btn btn-secondary btn-lg btn-block"
-                onClick={reload}
-                type="submit"
-              >
-                Reset
-              </button>
             </form>
             <div className="center">
               <h5>Your 1RM is: {oneRepMax}</h5>
             </div>
             <br></br>
-            
           </div>
         </div>
       </div>
     </div>
-    
   );
 }
 

@@ -14,13 +14,9 @@ function Bmi() {
       alert("Please enter valid weight and height");
     } else {
       // BMI formula
-      let bmi = (weight / (height * height) * 703)
+      let bmi = (weight / (height * height)) * 703;
       setBmi(bmi.toFixed(1));
     }
-  };
-  // allows user to reload
-  let reload = () => {
-    window.location.reload();
   };
 
   // HTML structure
@@ -69,16 +65,9 @@ function Bmi() {
                 className="btn btn-secondary btn-lg btn-block"
                 type="submit"
               >
-                Submit
+                Calculate BMI
               </button>
               <br></br>
-              <button
-                className="btn btn-secondary btn-lg btn-block"
-                onClick={reload}
-                type="submit"
-              >
-                Reset
-              </button>
             </form>
             <div className="center">
               <h5>Your BMI is: {bmi}</h5>
