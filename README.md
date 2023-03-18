@@ -4,16 +4,34 @@ A web application that provides information for women on diet, fitness workouts.
 
 The React.js code uses functions to handle user interactions and update the content on the screen. Two APIs are used to retrieve dietry to work out calories per serving and video workout ideas. 
 
-## APIs 
-The two APIs used in this website: 
-- *Calories Burned by API-Ninjas*
-- *Youtube*
+React was firstly installed:
+```
+npx create-react-app wellfit
+```
 
 ## NPM packages
 The NPM packages used in this wesbite:
 - *Fitness-Calc*
 - *Bootstrap* 
 - *Font Awesome*
+
+```
+npm i fitness-calc
+```
+```
+npm install bootstrap
+```
+```
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+```
+
+## APIs 
+The two APIs used in this website: 
+- *Calories Burned by API-Ninjas*
+- *Youtube*
+
 
 ## Working Tree
 ![Working tree]()

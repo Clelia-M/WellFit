@@ -6,7 +6,7 @@ function Workout() {
   const [weight, setWeight] = useState(0);
   const [reps, setReps] = useState(0);
   const [exercise, setExercise] = useState(0);
-  const [oneRepMax, setOneRepMax] = useState(0);
+  const [oneRepMaxEpley, setOneRepMaxEpley] = useState(0);
 
   let calcOneRepMax = (e) => {
     // prevent submitting
@@ -16,11 +16,11 @@ function Workout() {
       alert("Please enter valid weight and reps");
     } else {
       // Epley formula
-      let oneRepMax = weight * (1 + reps / 30);
-      setOneRepMax(oneRepMax.toFixed(1));
+      let oneRepMaxEpley = weight * (1 + reps / 30);
+      setOneRepMaxEpley(oneRepMaxEpley.toFixed(1));
     }
   };
-
+ 
   // HTML structure
   return (
     <div className="card-deck">
@@ -73,15 +73,17 @@ function Workout() {
                 Calculate 1RM
               </button>
               <br></br>
-            </form>
+              </form>
             <div className="center">
-              <h5>Your 1RM is: {oneRepMax}</h5>
+              <h5>Your 1RM is: {oneRepMaxEpley}</h5>
             </div>
             <br></br>
+            
           </div>
         </div>
       </div>
     </div>
+    
   );
 }
 

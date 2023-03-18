@@ -6,7 +6,7 @@ function Bmr() {
   const [height, setHeight] = useState(0);
   const [age, setAge] = useState(0);
   const [burned, setBurned] = useState(0);
-  const [calories, setCalories] = useState("");
+  const [bmrCalc, setBmrCalc] = useState("");
   const [activity, setActivity] = useState(0);
 
   let calculateBmr = (e) => {
@@ -16,11 +16,26 @@ function Bmr() {
     if (weight === 0 || height === 0 || age === 0) {
       alert("Please enter valid weight, height and age");
     } else {
-      // BMR formula for women
-      let calories = 50 + 2.3 * ((height - 60) / 2.54);
-      setCalories(calories.toFixed(2));
+      // BMR formula for women from fitness-calc
+      let bmrCalc = 50 + 2.3 * ((height - 60) / 2.54);
+      setBmrCalc(bmrCalc.toFixed(2));
     }
   };
+  // Harris Benedict Equation
+  // BMR * 1.2
+  // BMR * 1.375
+  // BMR * 1.55
+  // BMR * 1.725
+  //   let calculateCalories = (e) => {
+  //     e.preventDefault();
+  // if () {
+
+  // } else {
+  //  let bmrCalc * 1.2
+  //}
+
+  //   }
+  // };
 
   return (
     <div class="card-deck">
@@ -65,21 +80,20 @@ function Bmr() {
               </button>
             </form>
             <div className="center">
-              <h5>Your BMR is: {calories} </h5>
+              <h5>Your BMR is: {bmrCalc} </h5>
             </div>
             <div className="input-wrap">
               <label className="label">Workout in a week</label>
               <select className="activity" value={activity}>
-                <option value="">Select your Activity</option>
-                <option value="">Very little or no exercise</option>
-                <option value="">Exercise 1-3 times/week</option>
-                <option value="">Exercise 4-5 times/week</option>
-                <option value="">
-                  Daily exercise or intense exercise 3-4 times/week
+                <option value={activity}>Select your Activity</option>
+                <option value={activity}>Very little or no exercise</option>
+                <option value={activity}>Light exercise 1-3 times/week</option>
+                <option value={activity}>Moderate exercise 3-5 times/week</option>
+                <option value={activity}>
+                  Intense exercise 6-7 times/week
                 </option>
-                <option value="">Intense exercise 6-7 times/week</option>
-                <option value="">
-                  Very intense exercise daily, or physical{" "}
+                <option value={activity}>
+                  Very intense exercise daily and physical work
                 </option>
               </select>
               <br></br>
@@ -91,7 +105,7 @@ function Bmr() {
               </button>
               <br></br>
               <div className="center">
-                <h5>Calories burned: {burned} </h5>
+                <h5>Total energy expenditure: {burned} </h5>
               </div>
             </div>
           </div>
