@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "fitness-calc";
+// import "fitness-calc";
+import { BMR } from 'fitness-calculator';
 
 function Bmr() {
   const [weight, setWeight] = useState(0);
@@ -7,7 +8,7 @@ function Bmr() {
   const [age, setAge] = useState(0);
   const [burned, setBurned] = useState(0);
   const [bmrCalc, setBmrCalc] = useState("");
-  const [activity, setActivity] = useState(0);
+  const [activity, setActivity] = useState("");
 
   let calculateBmr = (e) => {
     // prevent submitting
@@ -17,25 +18,23 @@ function Bmr() {
       alert("Please enter valid weight, height and age");
     } else {
       // BMR formula for women from fitness-calc
-      let bmrCalc = 50 + 2.3 * ((height - 60) / 2.54);
-      setBmrCalc(bmrCalc.toFixed(2));
+      // let bmrCalc = 50 + 2.3 * ((height - 60) / 2.54);
+      let bmrCalc = BMR('female', parseInt(age), parseInt(height), parseInt(weight))
+      setBmrCalc(Math.round(bmrCalc));
     }
   };
+
+  const calculateHbe = () => {
+    setBurned(Math.round(bmrCalc*parseFloat(activity)))
+  }
   // Harris Benedict Equation
   // BMR * 1.2
   // BMR * 1.375
   // BMR * 1.55
   // BMR * 1.725
-  //   let calculateCalories = (e) => {
-  //     e.preventDefault();
-  // if () {
-
-  // } else {
-  //  let bmrCalc * 1.2
-  //}
-
-  //   }
-  // };
+ 
+  // BMR for women formula
+  // Women: BMR = 447.593 + (9.247 x weight in kg) + (3.098 x height in cm) – (4.330 x age in years)
 
   return (
     <div class="card-deck">
@@ -82,17 +81,17 @@ function Bmr() {
             <div className="center">
               <h5>Your BMR is: {bmrCalc} </h5>
             </div>
-            <div className="input-wrap">
+            <div className="activity">
               <label className="label">Workout in a week</label>
-              <select className="activity" value={activity}>
-                <option value={activity}>Select your Activity</option>
-                <option value={activity}>Very little or no exercise</option>
-                <option value={activity}>Light exercise 1-3 times/week</option>
-                <option value={activity}>Moderate exercise 3-5 times/week</option>
-                <option value={activity}>
-                  Intense exercise 6-7 times/week
-                </option>
-                <option value={activity}>
+              <select className="activity" value={activity} onChange={(e) => {
+                setActivity(e.target.value)
+                }}>
+                <option value="">Select your Activity</option>
+                <option value="1.2">Very little or no exercise</option>
+                <option value="1.375">Light exercise 1-3 times/week</option>
+                <option value="1.55">Moderate exercise 3-5 times/week</option>
+                <option value="1.725">Intense exercise 6-7 times/week</option>
+                <option value="1.9">
                   Very intense exercise daily and physical work
                 </option>
               </select>
@@ -100,6 +99,7 @@ function Bmr() {
               <button
                 className="btn btn-secondary btn-lg btn-block"
                 type="submit"
+                onClick={calculateHbe}
               >
                 Calculate Calories
               </button>

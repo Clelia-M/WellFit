@@ -1,5 +1,6 @@
+import { oneRepMaxEpley as reps} from "fitness-calc";
 import React, { useState } from "react";
-import "fitness-calc";
+
 
 function Workout() {
   // state
@@ -16,7 +17,8 @@ function Workout() {
       alert("Please enter valid weight and reps");
     } else {
       // Epley formula
-      let oneRepMaxEpley = weight * (1 + reps / 30);
+      // let oneRepMaxEpley = weight * (1 + reps / 30);
+      let oneRepMaxEpley = reps(weight, reps)
       setOneRepMaxEpley(oneRepMaxEpley.toFixed(1));
     }
   };

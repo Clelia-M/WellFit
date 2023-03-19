@@ -14,6 +14,8 @@ The NPM packages used in this wesbite:
 - *Fitness-Calc*
 - *Bootstrap* 
 - *Font Awesome*
+- *Chart*
+- *Moment*
 
 ```
 npm i fitness-calc
