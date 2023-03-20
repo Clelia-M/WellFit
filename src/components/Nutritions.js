@@ -120,7 +120,6 @@ function Nutritions() {
       </div>
     </div >
   );
-
 }
 
 export default Nutritions;
