@@ -5,7 +5,7 @@ import Cards from './components/Cards';
 import Nutritions from './components/Nutritions';
 import Workout from './components/Workout';
 import Charts from './components/Charts';
-import FAQ from './components/FAQ';
+// import FAQ from './components/FAQ';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -21,8 +21,9 @@ function App() {
       <Nutritions />
       <Workout />
       <Charts />
-      <FAQ />
+      {/* <FAQ /> */}
       <Newsletter />
+      {/* <Youtube /> */}
       <Footer />
     </div>
   );
