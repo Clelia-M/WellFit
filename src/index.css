@@ -86,7 +86,13 @@ body {
 .accordion-header,
 .accordion-button {
   background-color: var(--primaryclr);
-  color: var(--textlightclr);
+  color: var(--primarylightclr);
+  font-size: 18px;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primarylightclr);
+  background-color: var(--secondaryclr);
 }
 
 /* Newsletter sign-up */
