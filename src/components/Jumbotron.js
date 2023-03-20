@@ -9,7 +9,7 @@ function Jumbotron() {
           </div>
           <div className="col-md-6 text-center text-md-start">
             <h1 className="type-super">Health, <br></br> made simple.</h1>
-            <p className="type-large mb-5 lead"> We're here to help you achieve your health and fitness goals. With
+            <p id="motto" className="type-large mb-5 lead"> We're here to help you achieve your health and fitness goals. With
               easy-to-use tools for tracking your meals and workouts, you'll be
               on your way to a healthier you in no time.</p>
             </div>

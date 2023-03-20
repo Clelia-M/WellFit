@@ -58,6 +58,12 @@ body {
 /* Jumbotron */
 .type-super {
   color: var(--secondarylightclr);
+  font-size: 60px;
+}
+
+#motto {
+  padding-right: 250px;
+  font-size: 26px;
 }
 
 /* Cards section */
