@@ -65,10 +65,10 @@ function Nutritions() {
                 You can use the Daily Intake Calories Calculator tool to help you determine the right calorie limit for your wellness goals.
                 Your daily calorie limit is your target caloric intake per day.
               </p>
-              <h5>Please provide the details of your meals (food name and its quantity)</h5>
               <div className="dateInput my-3">
-                <h6 className="font-weight-bold">Today's Date: <Moment format='MMMM Do YYYY'>{date}</Moment></h6>
+                <h5 className="font-weight-bold">Today's date: <Moment format='MMMM Do YYYY'>{date}</Moment></h5>
               </div>
+              <h5>Please provide your meal details including food name and its quantity</h5>
               <form>
                 <div className="form-group">
                   <textarea
@@ -77,17 +77,16 @@ function Nutritions() {
                     name="food"
                     type="text"
                     className="form-control"
-                    placeholder="For example: 1 cup mashed potatoes and 2 tbsp gravy"
+                    placeholder="Please add all the food and use commas to separate each food item in each meal (For example: 200g mashed potatoes, 1 apple, 1 cupcake). Please check if all the food is added before calculating your total daily calories intake."
                     id="food-search"
                   />
                 </div>
-                <button onClick={handleFormSubmit} className="btn btn-warning my-3" type="submit">
-                  Search
+                <button onClick={handleFormSubmit} className="btn btn-secondary btn-lg btn-block my-3" type="submit">
+                  Calculate your calories intake
                 </button>
               </form>
-              <div className="result-list mb-4">
-                <h5>Your calories intake:</h5>
-                <p className="text-muted small">Only one food per row</p>
+              <div className="result-list mb-3">
+                <h5>Your calories intake</h5>
                 <table className="table table-hover">
                   <thead className="thead-dark">
                     <tr>
@@ -101,15 +100,16 @@ function Nutritions() {
                       <tr>
                         <td>{result.name}</td>
                         <td>{result.serving_size_g}</td>
-                        <td>{result.calories}</td>
+                        <td>{result.calories.toFixed(1)}</td>
                       </tr>
                     ))}
                     <tr>
                       <td colspan="2"><strong>Total calories:</strong></td>
-                      <td id="sumCal">{calorieSum()}</td>
+                      <td id="sumCal">{calorieSum().toFixed(1)}</td>
                     </tr>
                   </tbody>
                 </table>
+                <p className="text-muted small">*The table above shows only one food per row</p>
               </div>
             </div>
           </div>
