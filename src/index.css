@@ -85,6 +85,58 @@ body {
   line-height: 2;
 }
 
+.card-deck {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 0px 0px 10px #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border-radius: 5px;
+}
+
+select {
+  display: flex;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 5px 5px;
+  margin: 8px 0;
+  border-radius: 5px;
+}
+
+.card-deck button {
+  display: block;
+  width: 100%;
+  justify-content: center;
+  margin: 8px 0;
+  background-color: #5F1646;
+  color:#fff;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.card-deck label {
+  padding: 5px;
+}
+
+.card-deck input {
+  margin-left: 10px;
+}
+
 /* FAQ section */
 #questions,
 .accordion-item,
