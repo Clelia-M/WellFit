@@ -58,6 +58,12 @@ body {
 /* Jumbotron */
 .type-super {
   color: var(--secondarylightclr);
+  font-size: 60px;
+}
+
+#motto {
+  padding-right: 250px;
+  font-size: 26px;
 }
 
 /* Cards section */
@@ -86,7 +92,13 @@ body {
 .accordion-header,
 .accordion-button {
   background-color: var(--primaryclr);
-  color: var(--textlightclr);
+  color: var(--primarylightclr);
+  font-size: 18px;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primarylightclr);
+  background-color: var(--secondaryclr);
 }
 
 /* Newsletter sign-up */
@@ -96,12 +108,17 @@ body {
 
 .btn-news {
   background-color: var(--secondarylightclr);
-  color: var(--primaryclr);
+  color: var(--textlightclr);
 }
 
 .btn-news:hover {
-  background-color: var(--accentclr);
+  background-color: var(--primaryclr);
   color: var(--textlightclr);
+}
+
+#newsletter {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /*  Youtube style */
