@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import "fitness-calc";
 import { BMR } from 'fitness-calculator';
 
 function Bmr() {
@@ -18,7 +17,6 @@ function Bmr() {
       alert("Please enter valid weight, height and age");
     } else {
       // BMR formula for women from fitness-calc
-      // let bmrCalc = 50 + 2.3 * ((height - 60) / 2.54);
       let bmrCalc = BMR('female', parseInt(age), parseInt(height), parseInt(weight))
       setBmrCalc(Math.round(bmrCalc));
     }
@@ -79,7 +77,7 @@ function Bmr() {
               </button>
             </form>
             <div className="center">
-              <h5>Your BMR is: {bmrCalc} </h5>
+              <h5>Your BMR is: {bmrCalc} calories</h5>
             </div>
             <div className="activity">
               <label className="label">Workout in a week</label>
@@ -105,7 +103,7 @@ function Bmr() {
               </button>
               <br></br>
               <div className="center">
-                <h5>Total energy expenditure: {burned} </h5>
+                <h5>Total energy expenditure: {burned} calories</h5>
               </div>
             </div>
           </div>
