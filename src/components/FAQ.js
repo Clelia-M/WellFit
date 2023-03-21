@@ -10,7 +10,7 @@ function FAQ() {
       <Accordion.Item eventKey="0">
         <Accordion.Header>What is the purpose of this app?</Accordion.Header>
         <Accordion.Body>
-        WellFit mission is to provide recipe ideas for people who follow a vegetarian and gluten-free diet.
+        WellFit mission is designed to help busy moms achieve their weight loss goals by tracking their daily calorie intake and exercise routine.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1">
@@ -20,21 +20,21 @@ function FAQ() {
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2">
-        <Accordion.Header>  Can I save my favourite receipes on the app?</Accordion.Header>
+        <Accordion.Header>Can I track my calorie intake and exercise routine on the WellFit app?</Accordion.Header>
         <Accordion.Body>
-        You can save the last 6 recipes that you serached for so if you like them, you will always have the possibility to cook them again.
+        Absolutely! WellFit has a built-in tracking feature that allows you to log your daily meals and workouts. You can record your own calorie and fitness achievements, and the app also provide you with workout video-recommendations to help you stay on track.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="3">
-        <Accordion.Header>  Are all the recipes in this app vegeterian and gluten-free? </Accordion.Header>
+        <Accordion.Header>Can I use WellFit on my mobile device?</Accordion.Header>
         <Accordion.Body>
-        Yes, all the recipes provided on this app are specifically designed to be both vegetarian and gluten-free.
+        Yes, WellFit is designed to work seamlessly on both desktop and mobile devices. Simply access the web app from your smartphone or tablet browser.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="4">
-        <Accordion.Header> Are there options to filter recipes by specific dietary needs or restrictions? </Accordion.Header>
+        <Accordion.Header>How can I get support if I have a problem with WellFit?</Accordion.Header>
         <Accordion.Body>
-        Sure! The database is already set to provide you only vegetarian and gluten-free recipes but you can also include or exclude certain ingredients or choose your favourite cousine.
+        If you have any issues or questions about using WellFit, our customer support team is always here to help. You can contact us via email at support@wellfit.com. We strive to respond to all inquiries within 24 hours.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
