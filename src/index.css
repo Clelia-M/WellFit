@@ -1,27 +1,13 @@
-/* Standard cde to remove as soon as we have ours in place */
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 /* variables */
 :root {
   --primaryclr: #5F1646; 
-  --primarylightclr: #12a537;
+  --primarylightclr:#FAFAF5;
   --secondaryclr: #FCBC01;
   --secondarylightclr: #F5CE64;
   --accentclr: #054e37;
+  --accentlightclr: #12a537;
   --textlightclr: #fff;
-  --textcolor: black;
+  --textcolor: #333333;
   --sans-serif: Jost, sans-serif;
 }
 
@@ -48,23 +34,56 @@ body {
 
 }
 
+.nav-link:active,
+.navbar-brand:active {
+  color: var(--secondarylightclr);
+
+}
+
+.nav-link:focus,
+.navbar-brand:focus {
+  color: var(--secondarylightclr);
+
+}
+
 .navbar-item {
   font-size: 20px;
 }
 
 /* Header */
-header {
+#logo {
   background-color: var(--primaryclr);
 }
 
 /* Jumbotron */
-#mission {
-  color: var(--primaryclr);
-  padding-bottom: 20px;
+.type-super {
+  color: var(--secondarylightclr);
+  font-size: 60px;
 }
 
-#about {
-  margin-bottom: 100px;
+#motto {
+  padding-right: 250px;
+  font-size: 26px;
+}
+
+/* Cards section */
+.card-img-top {
+  height: 200px;
+  object-fit: contain;
+}
+
+.type-large-fat {
+  font-size: 45px;
+  color: var(--textcolor);
+}
+
+#cards-container {
+  margin: 50px 0;
+  padding: 50px 0;
+}
+
+.card-text {
+  line-height: 2;
 }
 
 .card-deck {
@@ -124,8 +143,14 @@ select {
 .accordion-item,
 .accordion-header,
 .accordion-button {
-  background-color: var(--accentclr);
-  color: var(--textlightclr);
+  background-color: var(--primaryclr);
+  color: var(--primarylightclr);
+  font-size: 18px;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primarylightclr);
+  background-color: var(--secondaryclr);
 }
 
 /* Newsletter sign-up */
@@ -135,11 +160,82 @@ select {
 
 .btn-news {
   background-color: var(--secondarylightclr);
-  color: var(--primaryclr);
+  color: var(--textlightclr);
 }
 
 .btn-news:hover {
-  background-color: var(--accentclr);
+  background-color: var(--primaryclr);
+  color: var(--textlightclr);
+}
+
+#newsletter {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*  Youtube style */
+
+#yt-title {
+  font-size: 45px;
+  margin: 50px auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#youtube {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.33% - 10px);
+  margin-bottom: 10px;
+}
+
+.video-title {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  height: 70px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.video-img {
+  display: block;
+  margin: 10px auto;
+  padding: 10px auto;
+  text-align: center;
+}
+
+.video-link {
+  margin: 15px auto;
+  padding: 15px auto;
+  text-align: center;
+  background-color: var(--secondarylightclr);
+}
+
+.video-btn {
+  background-color: var(--primaryclr);
+  color: var(--textlightclr);
+  width: 250px;
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.video-btn:hover {
+  background-color: var(--secondaryclr);
   color: var(--textlightclr);
 }
 
@@ -148,14 +244,18 @@ select {
   color: var(--textlightclr);
 }
 
+.bi-arrow-up-circle:hover {
+  color: var(--secondarylightclr);
+}
+
 .card-bg-primary {
   background-color: var(--primaryclr);
   border: 1px solid var(--primaryclr);
 }
 
 .btn-acc-round {
-  background-color: var(--secondarylightclr);
-  border: 5px solid var(--secondarylightclr);
+  background-color: var(--textlightclr);
+  border: 5px solid var(--textlightclr);
   border-radius: 50%;
   color: var(--textlightclr);
   font-weight: 700;
@@ -163,8 +263,8 @@ select {
 }
 
 .btn-acc-round:hover {
-  background-color: var(--accentclr);
-  border: 5px solid var(--accentclr);
+  background-color: var(--secondarylightclr);
+  border: 5px solid var(--secondarylightclr);
   color: var(--textlightclr);
   box-shadow: 0 0 11px rgba(33, 33, 33, .5);
 }
@@ -173,4 +273,29 @@ a,
 a:hover {
   text-decoration: none;
   color: var(--primaryclr);
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+ 
+  .video-container {
+    width: calc(33.33% - 10px);
+    }
+}
+
+@media (max-width: 767px) {
+  .jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .video-container {
+    width: 100%;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .video-container {
+    width: calc(50% - 10px);
+    }
 }

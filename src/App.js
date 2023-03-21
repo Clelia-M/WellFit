@@ -7,15 +7,17 @@ import Workout from './components/Workout';
 import Bmr from './components/Bmr';
 import Bmi from './components/Bmi';
 import Charts from './components/Charts';
-import FAQ from './components/FAQ';
+// import FAQ from './components/FAQ';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 
 function App() {
   return (
     <div>
       <Navbar />
+      <Header />
       <Jumbotron />
       <Cards />
       <Nutritions />
@@ -23,8 +25,9 @@ function App() {
       <Bmr />
       <Bmi />
       <Charts />
-      <FAQ />
+      {/* <FAQ /> */}
       <Newsletter />
+      {/* <Youtube /> */}
       <Footer />
     </div>
   );
