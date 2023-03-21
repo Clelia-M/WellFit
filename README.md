@@ -12,6 +12,7 @@ npx create-react-app wellfit
 ## NPM packages
 The NPM packages used in this wesbite:
 - *Fitness-Calc*
+- *Fitness-Calculator*
 - *Bootstrap* 
 - *Font Awesome*
 - *Chart*
