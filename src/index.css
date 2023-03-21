@@ -1,12 +1,13 @@
 /* variables */
 :root {
   --primaryclr: #5F1646; 
-  --primarylightclr: #12a537;
+  --primarylightclr:#FAFAF5;
   --secondaryclr: #FCBC01;
   --secondarylightclr: #F5CE64;
   --accentclr: #054e37;
+  --accentlightclr: #12a537;
   --textlightclr: #fff;
-  --textcolor: black;
+  --textcolor: #333333;
   --sans-serif: Jost, sans-serif;
 }
 
@@ -33,23 +34,56 @@ body {
 
 }
 
+.nav-link:active,
+.navbar-brand:active {
+  color: var(--secondarylightclr);
+
+}
+
+.nav-link:focus,
+.navbar-brand:focus {
+  color: var(--secondarylightclr);
+
+}
+
 .navbar-item {
   font-size: 20px;
 }
 
 /* Header */
-header {
+#logo {
   background-color: var(--primaryclr);
 }
 
 /* Jumbotron */
-#mission {
-  color: var(--primaryclr);
-  padding-bottom: 20px;
+.type-super {
+  color: var(--secondarylightclr);
+  font-size: 60px;
 }
 
-#about {
-  margin-bottom: 100px;
+#motto {
+  padding-right: 250px;
+  font-size: 26px;
+}
+
+/* Cards section */
+.card-img-top {
+  height: 200px;
+  object-fit: contain;
+}
+
+.type-large-fat {
+  font-size: 45px;
+  color: var(--textcolor);
+}
+
+#cards-container {
+  margin: 50px 0;
+  padding: 50px 0;
+}
+
+.card-text {
+  line-height: 2;
 }
 
 /* FAQ section */
@@ -57,7 +91,7 @@ header {
 .accordion-item,
 .accordion-header,
 .accordion-button {
-  background-color: var(--accentclr);
+  background-color: var(--primaryclr);
   color: var(--textlightclr);
 }
 
