@@ -36,9 +36,9 @@ function Youtube() {
           <br />
           <a
             href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
-            className="video-link"
+            target="_blank" rel="noopener noreferrer" className="video-link"
           >
-            <button target="_blank" className="btn video-btn">Watch on YouTube</button>
+            <button className="btn video-btn">Watch on YouTube</button>
           </a>
         </div>
       ))}

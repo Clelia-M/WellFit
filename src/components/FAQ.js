@@ -6,9 +6,9 @@ function FAQ() {
     <section id="questions" class="p-5">
        <div class="container">
        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-    <Accordion defaultActiveKey="0" id="questions" flush>
+    <Accordion defaultActiveKey="0" id="questions" flush className="custom-accordion">
       <Accordion.Item eventKey="0">
-        <Accordion.Header>What is the purpose of this app?</Accordion.Header>
+        <Accordion.Header className="arrow">What is the purpose of this app?</Accordion.Header>
         <Accordion.Body>
         WellFit mission is designed to help busy moms achieve their weight loss goals by tracking their daily calorie intake and exercise routine.
         </Accordion.Body>

@@ -35,9 +35,9 @@ body {
 }
 
 .nav-link:active,
-.navbar-brand:active {
+.navbar-brand:active,
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
   color: var(--secondarylightclr);
-
 }
 
 .nav-link:focus,
@@ -62,7 +62,6 @@ body {
 }
 
 #motto {
-  padding-right: 250px;
   font-size: 26px;
 }
 
@@ -98,7 +97,7 @@ body {
 
 .accordion-button:not(.collapsed) {
   color: var(--primarylightclr);
-  background-color: var(--secondaryclr);
+  background-color: var(--secondarylightclr);
 }
 
 /* Newsletter sign-up */
