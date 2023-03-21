@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import API from "../utils/API";
-import CalendarTime from "./CalendarTime";
+import Moment from 'react-moment';
 
 function Nutritions() {
   const [search, setSearch] = useState("")
   const [results, setResults] = useState([])
-  const [formData, setFormData] = useState({ dateTime: "", food: "" });
+  const [formData, setFormData] = useState({ food: "" });
+  const date = new Date();
 
   const searchFood = query => {
     API.search(query)
@@ -30,13 +31,11 @@ function Nutritions() {
     searchFood(search);
     let savedSearch = JSON.parse(localStorage.getItem("searchedFood")) || [];
     savedSearch.push({
-      date: document.getElementById("dateInput").value,
       meal: document.getElementById("food-search").value,
     });
     localStorage.setItem("searchedFood", JSON.stringify(savedSearch));
     setSearch("");
     setFormData({
-      dateTime: "",
       food: ""
     });
   };
@@ -66,10 +65,9 @@ function Nutritions() {
                 You can use the Daily Intake Calories Calculator tool to help you determine the right calorie limit for your wellness goals.
                 Your daily calorie limit is your target caloric intake per day.
               </p>
-              <h5>Please provide the details of your meals (date/time, food name and its quantity)</h5>
-              <div className="dateInput mb-4">
-                <label className="font-weight-bold">Date & Time</label>
-                <CalendarTime />
+              <h5>Please provide the details of your meals (food name and its quantity)</h5>
+              <div className="dateInput my-3">
+                <h6 className="font-weight-bold">Today's Date: <Moment format='MMMM Do YYYY'>{date}</Moment></h6>
               </div>
               <form>
                 <div className="form-group">
@@ -107,12 +105,11 @@ function Nutritions() {
                       </tr>
                     ))}
                     <tr>
-                      <td colspan="2">Total calories:</td>
+                      <td colspan="2"><strong>Total calories:</strong></td>
                       <td id="sumCal">{calorieSum()}</td>
                     </tr>
                   </tbody>
                 </table>
-
               </div>
             </div>
           </div>
