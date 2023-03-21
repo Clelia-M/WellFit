@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# WellFit Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application that provides information for women on diet, fitness workouts. The user can calculate how many calories are in the food they are consuming, workout there BMI, BMR and also calculate there 1RM. Along with all of this information the user is provided with links to Youtube videos for workout ideas.
 
-## Available Scripts
+The React.js code uses functions to handle user interactions and update the content on the screen. Two APIs are used to retrieve dietry to work out calories per serving and video workout ideas. 
 
-In the project directory, you can run:
+React was firstly installed:
+```
+npx create-react-app wellfit
+```
 
-### `npm start`
+## NPM packages
+The NPM packages used in this wesbite:
+- *Fitness-Calc*
+- *Fitness-Calculator*
+- *Bootstrap* 
+- *Font Awesome*
+- *Chart*
+- *Moment*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+npm i fitness-calc
+```
+```
+npm install bootstrap
+```
+```
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## APIs 
+The two APIs used in this website: 
+- *Calories Burned by API-Ninjas*
+- *Youtube*
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Working Tree
+![Working tree]()
 
-### `npm run build`
+This app has been created as a group project by **Bex Ford, Clelia Mangione and Jingyue Zhao** for the edEX Front-End Development Bootcamp. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Table of Contents
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Key Features](#key-features)
+- [Workflow](#workflow)
+- [Link to the Application](#link-to-deployed-application)
+- [Final result](#final-results)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Key Features
 
-### `npm run eject`
+- Calculate how many calories are in the food you have consumed.
+- Work out your 1RM (one rep max).
+- Work out your BMI (Body mass index).
+- Work out your BRM (Basal metabolic rate).
+- Watch workout videos from Youtube.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Workflow
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. The user types the name of the food they have consumed. 
+2. This triggers the Calories Burned API. 
+3. In the Videos Ideas section, the YouTube API is triggered to show 3 video ideas for general workouts.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Link to deployed Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[WellFit]()
 
-## Learn More
+## GitHub 
+[GitHub]()
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Final Results
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+When the user visits the page it is displayed with a navigation bar at the top and the logo as you can see in the image below:
+![Website](assets/Website.png)
 
-### Code Splitting
+## Caclories Burned API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The first API we created was from **Calories Burned by API-Ninjas**. This API allows users to input there food and the API will calculate how many calories is in the specific food they have entered. 
 
-### Analyzing the Bundle Size
+![Calories API]()
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Youtube API 
 
-### Making a Progressive Web App
+The second API we created was **Youtube**. This enabled users to have a video link of workout ideas. We felt this made the overall user experience great as all of the information was given without the user having to do a second search. As you can see in the image below the user has the option to click on **Watch on Youtube** button if they choose to do so. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Youtube API]()
 
-### Advanced Configuration
+## Brand theme
+Below is an image of the colour palette in which we used throughout designing the web application. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![colour theme](assets/JVcolour.png)
 
-### Deployment
+The font style we used for this project was called **Jost** from google fonts.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## Credits 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Ryan Ford (Graphic Designer). Ryan designed the WellFit logo for this project which is displayed below. 
+![WellFit Logo]()
