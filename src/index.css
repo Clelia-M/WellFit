@@ -153,6 +153,12 @@ select {
   margin-left: 10px;
 }
 
+#wellfit {
+  color: var(--primaryclr);
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
 /* tracker section */
 #trackers {
   display: flex;
