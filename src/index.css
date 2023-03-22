@@ -61,11 +61,26 @@ body {
   font-size: 60px;
 }
 
-#motto {
-  font-size: 26px;
+#motto,
+#fitness {
+  font-size: 24px;
+}
+
+.fitness-sec {
+  background-color: var(--primaryclr);
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+#fitness {
+  color: var(--textlightclr);
 }
 
 /* Cards section */
+.card {
+  border: none;
+}
+
 .card-img-top {
   height: 200px;
   object-fit: contain;
@@ -91,27 +106,24 @@ body {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  box-shadow: 0px 0px 10px #ccc;
-  border-radius: 8px;
+  /* box-shadow: 0px 0px 10px #ccc; */
+  /* border-radius: 8px; */
   padding: 1rem;
 }
 
-input {
+input,
+select {
   display: block;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 16px;
   padding: 5px 5px;
   margin: 8px 0;
   border-radius: 5px;
+  border: var(--primaryclr) 1px solid;
 }
 
-select {
-  display: flex;
-  width: 100%;
-  font-size: 1.2rem;
-  padding: 5px 5px;
-  margin: 8px 0;
-  border-radius: 5px;
+.input-news {
+  margin: initial;
 }
 
 .card-deck button {
@@ -123,10 +135,9 @@ select {
   color:#fff;
   padding: 10px 0;
   font-size: 1.2rem;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 8px;
   cursor: pointer;
-
 }
 
 .card-deck label {
@@ -137,6 +148,67 @@ select {
   margin-left: 10px;
 }
 
+#wellfit {
+  color: var(--primaryclr);
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
+/* tracker section */
+#trackers,
+#wcalculator {
+  display: flex;
+}
+
+#component1,
+#component2 {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+#date {
+  font-style: italic;
+}
+
+.title {
+  color: var(--primaryclr);
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.btn-trackers {
+  background-color: var(--primaryclr);
+  color: var(--textlightclr);
+  width: 250px;
+  font-size: 25px;
+  font-weight: 500;
+  border: none;
+}
+
+.btn-trackers:hover {
+  background-color: var(--secondarylightclr);
+  color: var(--textlightclr);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.form-group {
+  margin-right: 10px;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+}
+
+form br {
+  margin-top: 10px;
+}
 /* FAQ section */
 #questions,
 .accordion-item,
@@ -310,4 +382,16 @@ a:hover {
   .video-container {
     width: calc(50% - 10px);
     }
+}
+
+@media (max-width: 600px) {
+  #trackers,
+  #wcalculator {
+    flex-direction: column;
+  }
+  
+  #component1,
+  #component2 {
+    width: 100%;
+  }
 }
