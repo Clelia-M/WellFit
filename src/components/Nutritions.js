@@ -82,11 +82,11 @@ function Nutritions() {
                   />
                 </div>
                 <button onClick={handleFormSubmit} className="btn btn-secondary btn-lg btn-block my-3" type="submit">
-                  Calculate your calories intake
+                  Calculate your calorie intake
                 </button>
               </form>
               <div className="result-list mb-3">
-                <h5>Your calories intake</h5>
+                <h5>Your calorie intake</h5>
                 <table className="table table-hover">
                   <thead className="thead-dark">
                     <tr>
@@ -104,7 +104,7 @@ function Nutritions() {
                       </tr>
                     ))}
                     <tr>
-                      <td colspan="2"><strong>Total calories:</strong></td>
+                      <td colSpan="2"><strong>Total calories:</strong></td>
                       <td id="sumCal">{calorieSum().toFixed(1)}</td>
                     </tr>
                   </tbody>
