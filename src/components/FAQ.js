@@ -6,7 +6,7 @@ function FAQ() {
     <section id="questions" class="p-5">
       <div class="container">
         <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-        <Accordion defaultActiveKey="0" id="questions" flush className="custom-accordion">
+        <Accordion id="questions" flush className="custom-accordion">
           <Accordion.Item eventKey="0">
             <Accordion.Header className="arrow">What is the purpose of this app?</Accordion.Header>
             <Accordion.Body>
