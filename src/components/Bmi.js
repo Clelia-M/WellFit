@@ -21,7 +21,7 @@ function Bmi() {
 
   // HTML structure
   return (
-    <div className="card-deck">
+    <div className="card-deck" id="bmi">
       <div>
         <div className="row">
           <div className="card text-center">
