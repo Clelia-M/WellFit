@@ -274,6 +274,19 @@ a:hover {
   color: var(--primaryclr);
 }
 
+#justveggie {
+  padding: 20px 0;
+}
+
+#veggie {
+  color: var(--secondarylightclr);
+  font-size: 25px;
+}
+
+#veggie:hover {
+  color: var(--primarylightclr);
+}
+
 /* Media queries */
 @media (max-width: 992px) {
  
