@@ -1,6 +1,6 @@
 # WellFit Application
 
-A web application that provides information for women on diet, fitness workouts. The user can calculate how many calories are in the food they are consuming, workout there BMI, BMR and also calculate there 1RM. Along with all of this information the user is provided with links to Youtube videos for workout ideas.
+A web application that provides information for women on diet, fitness workouts. The user can calculate how many calories are in the food they are consuming, workout their BMI, BMR and also calculate their 1RM. Along with all of this information the user is provided with links to Youtube videos for workout ideas.
 
 The React.js code uses functions to handle user interactions and update the content on the screen. Two APIs are used to retrieve dietry to work out calories per serving and video workout ideas. 
 
@@ -14,12 +14,16 @@ The NPM packages used in this wesbite:
 - *Fitness-Calc*
 - *Fitness-Calculator*
 - *Bootstrap* 
+- *Bootstrap icon*
 - *Font Awesome*
-- *Chart*
-- *Moment*
+- *Axios*
+- *React Moment*
 
 ```
 npm i fitness-calc
+```
+```
+npm i fitness-calculator
 ```
 ```
 npm install bootstrap
@@ -29,15 +33,21 @@ npm i --save @fortawesome/fontawesome-svg-core
 npm install --save @fortawesome/free-solid-svg-icons
 npm install --save @fortawesome/react-fontawesome
 ```
+```
+npm i react-moment
+```
+```
+npm i axios
+```
 
 ## APIs 
 The two APIs used in this website: 
-- *Calories Burned by API-Ninjas*
+- *Nutrition by API-Ninjas*
 - *Youtube*
 
 
 ## Working Tree
-![Working tree]()
+![Working tree](src/assets/filetree.png)
 
 This app has been created as a group project by **Bex Ford, Clelia Mangione and Jingyue Zhao** for the edEX Front-End Development Bootcamp. 
 
@@ -59,42 +69,43 @@ This app has been created as a group project by **Bex Ford, Clelia Mangione and 
 # Workflow
 
 1. The user types the name of the food they have consumed. 
-2. This triggers the Calories Burned API. 
+2. This triggers the Nutrition API. 
 3. In the Videos Ideas section, the YouTube API is triggered to show 3 video ideas for general workouts.
 
 ## Link to deployed Application
 
-[WellFit]()
+[WellFit](https://well-fit.netlify.app/)
 
 ## GitHub 
-[GitHub]()
+[GitHub](https://github.com/Clelia-M/WellFit)
 
 ## Final Results
 
 When the user visits the page it is displayed with a navigation bar at the top and the logo as you can see in the image below:
-![Website](assets/Website.png)
+![Website](src/assets/final.png)
 
-## Caclories Burned API
+![Website](src/assets/caloriesbmr.png)
 
-The first API we created was from **Calories Burned by API-Ninjas**. This API allows users to input there food and the API will calculate how many calories is in the specific food they have entered. 
+![Website](src/assets/onerepmax.png)
 
-![Calories API]()
+## Nutrition API
+
+The first API we created was from **Nutrition by API-Ninjas**. This API allows users to input there food and the API will calculate how many calories is in the specific food they have entered. 
+
 
 ## Youtube API 
 
 The second API we created was **Youtube**. This enabled users to have a video link of workout ideas. We felt this made the overall user experience great as all of the information was given without the user having to do a second search. As you can see in the image below the user has the option to click on **Watch on Youtube** button if they choose to do so. 
 
-![Youtube API]()
-
 ## Brand theme
 Below is an image of the colour palette in which we used throughout designing the web application. 
 
-![colour theme](assets/JVcolour.png)
+![colour theme](src/assets/colourpalette.png)
 
 The font style we used for this project was called **Jost** from google fonts.
 
 
 ## Credits 
 
-- Ryan Ford (Graphic Designer). Ryan designed the WellFit logo for this project which is displayed below. 
-![WellFit Logo]()
+- Ryan Ford (Graphic Designer). Ryan designed the WellFit logo for this project.
+
