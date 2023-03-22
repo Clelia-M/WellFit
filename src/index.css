@@ -111,23 +111,15 @@ body {
   padding: 1rem;
 }
 
-input {
+input,
+select {
   display: block;
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
   padding: 5px 5px;
   margin: 8px 0;
   border-radius: 5px;
   border: var(--primaryclr) 1px solid;
-}
-
-select {
-  display: flex;
-  width: 100%;
-  font-size: 1.2rem;
-  padding: 5px 5px;
-  margin: 8px 0;
-  border-radius: 5px;
 }
 
 .card-deck button {
@@ -160,7 +152,8 @@ select {
 }
 
 /* tracker section */
-#trackers {
+#trackers,
+#wcalculator {
   display: flex;
 }
 
@@ -389,7 +382,8 @@ a:hover {
 }
 
 @media (max-width: 600px) {
-  #trackers {
+  #trackers,
+  #wcalculator {
     flex-direction: column;
   }
   

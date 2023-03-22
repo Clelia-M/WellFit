@@ -29,8 +29,10 @@ function App() {
         <div id="component2"> <Bmr /></div>
       </div>
       <Fitness />
-      <Workout />
-      <Bmi />
+      <div className="container" id="wcalculator">
+        <div id="component1">  <Bmi /></div>
+        <div id="component2"> <Workout /></div>
+      </div>      
       <Charts />
       <FAQ />
       <Newsletter />

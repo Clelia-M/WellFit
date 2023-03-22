@@ -22,10 +22,10 @@ function Bmi() {
   // HTML structure
   return (
     <div className="card-deck">
-      <div className="col-sm-6">
+      <div>
         <div className="row">
           <div className="card text-center">
-            <h2>BMI Calculator</h2>
+            <h2 className="title">BMI Calculator</h2>
             <h5>What is BMI?</h5>
             <p>
               Body mass index (BMI) is a person's weight in kilograms divided by
@@ -34,6 +34,8 @@ function Bmi() {
               overweight, and obesity.
             </p>
             <form onSubmit={calculateBmi}>
+            <div className="form-row">
+                <div className="form-group">
               <label>
                 Weight (lbs)
                 <input
@@ -42,7 +44,8 @@ function Bmi() {
                   onChange={(e) => setWeight(e.target.value)}
                 />
               </label>
-              <br></br>
+              </div>
+              <div className="form-group">
               <label>
                 Height (inches)
                 <input
@@ -51,23 +54,26 @@ function Bmi() {
                   onChange={(e) => setHeight(e.target.value)}
                 />
               </label>
-              <br></br>
+              </div>
+              <div className="form-group">
               <label>
                 Age
                 <input
                   type="text"
                   value={age}
-                  onChange={(e) => setAge(e.target.value)}
-                />
+                  onChange={(e) => setAge(e.target.value)} />
               </label>
-              <br></br>
+              </div>
+                <br />
+              </div>
+              <div className="form-group">
               <button
-                className="btn btn-secondary btn-lg btn-block"
+                className="btn btn-trackers"
                 type="submit"
               >
                 Calculate BMI
               </button>
-              <br></br>
+              </div>
             </form>
             <div className="center">
               <h5>Your BMI is: {bmi}</h5>
