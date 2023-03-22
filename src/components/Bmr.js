@@ -23,58 +23,65 @@ function Bmr() {
   };
 
   const calculateHbe = () => {
-    setBurned(Math.round(bmrCalc*parseFloat(activity)))
+    setBurned(Math.round(bmrCalc * parseFloat(activity)))
   }
   // Harris Benedict Equation
   // BMR * 1.2
   // BMR * 1.375
   // BMR * 1.55
   // BMR * 1.725
- 
+
   // BMR for women formula
   // Women: BMR = 447.593 + (9.247 x weight in kg) + (3.098 x height in cm) – (4.330 x age in years)
 
   return (
-    <div class="card-deck">
-      <div className="col-sm-6">
+    <div class="card-deck" id="workout">
+      <div>
         <div className="row">
           <div className="card text-center">
-            <h2>Womens BMR Calculator</h2>
+            <h2 className="title">Womens BMR Calculator</h2>
             <h5>
-              Basal metabolic rate (BMR). Even when resting, your body burns
+              Which is your Basal metabolic rate (BMR)?</h5>
+            <p>Even when resting, your body burns
               calories by performing basic functions to sustain life such as:
               breathing, circulation, nutrient processing and cell production.
+              <br />
+              <br />
               Basal metabolic rate is the number of calories your body needs to
-              accomplish its most basic (basal) life-sustaining functions.
-            </h5>
+              accomplish its most basic (basal) life-sustaining functions.</p>
             <form onSubmit={calculateBmr}>
-              <label>
-                Weight (kg)
-                <input
-                  value={weight}
-                  onChange={(e) => setWeight(e.target.value)}
-                />
-              </label>
-              <br></br>
-              <label>
-                Height (cm)
-                <input
-                  value={height}
-                  onChange={(e) => setHeight(e.target.value)}
-                />
-              </label>
-              <br></br>
-              <label>
-                Age
-                <input value={age} onChange={(e) => setAge(e.target.value)} />
-              </label>
-              <br></br>
-              <button
-                className="btn btn-secondary btn-lg btn-block"
-                type="submit"
-              >
-                Calculate BMR
-              </button>
+              <div className="form-row">
+                <div className="form-group">
+                  <label>
+                    Weight (kg)
+                    <input
+                      value={weight}
+                      onChange={(e) => setWeight(e.target.value)}
+                    />
+                  </label>
+                </div>
+                <div className="form-group">
+                  <label>
+                    Height (cm)
+                    <input
+                      value={height}
+                      onChange={(e) => setHeight(e.target.value)}
+                    />
+                  </label>
+                </div>
+                <div className="form-group">
+                  <label>
+                    Age
+                    <input value={age} onChange={(e) => setAge(e.target.value)} />
+                  </label>
+                </div>
+                <br />
+              </div>
+              <div className="form-group">
+                <button className="btn btn-trackers" type="submit">
+                  Calculate BMR
+                </button>
+              </div>
             </form>
             <div className="center">
               <h5>Your BMR is: {bmrCalc} calories</h5>
@@ -83,7 +90,7 @@ function Bmr() {
               <label className="label">Workout in a week</label>
               <select className="activity" value={activity} onChange={(e) => {
                 setActivity(e.target.value)
-                }}>
+              }}>
                 <option value="">Select your Activity</option>
                 <option value="1.2">Very little or no exercise</option>
                 <option value="1.375">Light exercise 1-3 times/week</option>
@@ -95,7 +102,7 @@ function Bmr() {
               </select>
               <br></br>
               <button
-                className="btn btn-secondary btn-lg btn-block"
+                className="btn btn-trackers"
                 type="submit"
                 onClick={calculateHbe}
               >

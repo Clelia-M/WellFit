@@ -50,25 +50,26 @@ function Nutritions() {
   };
 
   return (
-    <div className="container">
+    <div className="container" id="nutritions">
       <div className="card-deck">
         <div className="col">
           <div className="row">
             <div className="card text-center">
-              <h2>Daily Intake Calories Calculator</h2>
+              <h2 className="title">Daily Intake Calories Calculator</h2>
               <h5>How to lose weight?</h5>
               <p>
                 Keep your net calories below your calculated daily calorie needs.
                 You can do this by eating fewer calories or exercising more.
                 For the best results, do both!
                 <br />
+                <br />
                 You can use the Daily Intake Calories Calculator tool to help you determine the right calorie limit for your wellness goals.
                 Your daily calorie limit is your target caloric intake per day.
               </p>
               <div className="dateInput my-3">
-                <h5 className="font-weight-bold">Today's date: <Moment format='MMMM Do YYYY'>{date}</Moment></h5>
+                <h5 id="date" className="font-weight-bold">Today's date: <Moment format='MMMM Do YYYY'>{date}</Moment></h5>
               </div>
-              <h5>Please provide your meal details including food name and its quantity</h5>
+              <p>Please provide your meal details including food name and its quantity and add all the food you had for better results.</p>
               <form>
                 <div className="form-group">
                   <textarea
@@ -77,16 +78,16 @@ function Nutritions() {
                     name="food"
                     type="text"
                     className="form-control"
-                    placeholder="Please add all the food and use commas to separate each food item in each meal (For example: 200g mashed potatoes, 1 apple, 1 cupcake). Please check if all the food is added before calculating your total daily calories intake."
+                    placeholder="Please add all the food and use commas to separate each food item in each meal. (For example: 200g mashed potatoes, 1 apple, 1 cupcake)"
                     id="food-search"
                   />
                 </div>
-                <button onClick={handleFormSubmit} className="btn btn-secondary btn-lg btn-block my-3" type="submit">
-                  Calculate your calories intake
+                 <button onClick={handleFormSubmit} className="btn btn-trackers" type="submit">
+                  Calculate your calorie intake
                 </button>
               </form>
               <div className="result-list mb-3">
-                <h5>Your calories intake</h5>
+                <h5>Your calorie intake</h5>
                 <table className="table table-hover">
                   <thead className="thead-dark">
                     <tr>
@@ -104,12 +105,12 @@ function Nutritions() {
                       </tr>
                     ))}
                     <tr>
-                      <td colspan="2"><strong>Total calories:</strong></td>
+                      <td colSpan="2"><strong>Total calories:</strong></td>
                       <td id="sumCal">{calorieSum().toFixed(1)}</td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="text-muted small">*The table above shows only one food per row</p>
+                <p className="text-muted small">*The table above shows one food per row</p>
               </div>
             </div>
           </div>
