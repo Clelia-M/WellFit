@@ -12,6 +12,7 @@ import FAQ from './components/FAQ';
 import Newsletter from './components/Newsletter';
 import Youtube from './components/Youtube';
 import Footer from './components/Footer';
+import Fitness from './components/Fitness';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <div id="component1"> <Nutritions /></div>
         <div id="component2"> <Bmr /></div>
       </div>
+      <Fitness />
       <Workout />
       <Bmi />
       <Charts />
