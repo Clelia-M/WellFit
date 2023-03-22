@@ -9,7 +9,7 @@ import Bmr from './components/Bmr';
 import Bmi from './components/Bmi';
 import FAQ from './components/FAQ';
 import Newsletter from './components/Newsletter';
-import Youtube from './components/Youtube';
+// import Youtube from './components/Youtube';
 import Footer from './components/Footer';
 import Fitness from './components/Fitness';
 
@@ -31,7 +31,7 @@ function App() {
       </div>  
       <FAQ />
       <Newsletter />
-      <Youtube />
+      {/* <Youtube /> */}
       <Footer />
     </div>
   );
