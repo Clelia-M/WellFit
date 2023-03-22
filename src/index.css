@@ -122,6 +122,10 @@ select {
   border: var(--primaryclr) 1px solid;
 }
 
+.input-news {
+  margin: initial;
+}
+
 .card-deck button {
   display: block;
   width: 100%;
@@ -134,7 +138,6 @@ select {
   /* border: 1px solid #ccc; */
   border-radius: 8px;
   cursor: pointer;
-
 }
 
 .card-deck label {

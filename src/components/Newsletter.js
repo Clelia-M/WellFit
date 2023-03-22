@@ -8,9 +8,8 @@ function Newsletter() {
         <h3 className="mb-3 mb-md-0">
           Sign up for Our Newsletter
         </h3>
-
-        <div className="input-group news-input">
-          <input type="text" className="form-control" placeholder="Enter Email" />
+        <div className="input-group">
+          <input type="text" className="form-control input-news" placeholder="Enter Email" />
           <button className="btn btn-news btn-lg" type="button">Subscribe</button>
         </div>
       </div>
