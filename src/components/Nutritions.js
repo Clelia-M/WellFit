@@ -77,7 +77,7 @@ function Nutritions() {
                     name="food"
                     type="text"
                     className="form-control"
-                    placeholder="Please add all the food and use commas to separate each food item in each meal. (For example: 200g mashed potatoes, 1 apple, 1 cupcake)"
+                    placeholder="Please add all the food and use commas to separate each food item in each meal. For example: 200g mashed potatoes, 100g sausages, 75g strawberries, 120g yogurt"
                     id="food-search"
                   />
                 </div>
